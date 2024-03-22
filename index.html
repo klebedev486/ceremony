@@ -20,6 +20,7 @@
         -1px  1px 0 #000,
         1px  1px 0 #000;
         }
+
     .upper-left-up {
         position: fixed;
         writing-mode: vertical-lr; 
@@ -114,7 +115,7 @@
     }
     @media (max-width: 1000px) {
     #deco-size {
-        font-size: 13px;
+        font-size: 20px;
         }
     }
         
@@ -148,4 +149,17 @@
     <div class="side-image">
         <img src="KostyaAndCarol2.png" class="right-side-image" alt="Kostya And Carol Together">
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var scaleValue = '1';
+            if (window.innerWidth <= 600) { // Example: Mobile devices
+                scaleValue = '0.8'; // Mimics zooming out
+            }
+    
+            var viewportMetaTag = document.createElement('meta');
+            viewportMetaTag.name = 'viewport';
+            viewportMetaTag.content = 'width=device-width, initial-scale=' + scaleValue;
+            document.getElementsByTagName('head')[0].appendChild(viewportMetaTag);
+        });
+    </script>
 </body>

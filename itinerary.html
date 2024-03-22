@@ -142,11 +142,12 @@
     top: 60%;
     transform: translate(-50%, -50%);
     width: 270px; 
+    
     }
     }
     @media (max-width: 1000px) {
     #deco-size {
-        font-size: 13px;
+        font-size: 20px; /* reduced -7 for mobile */
         }
     
     }
@@ -236,5 +237,16 @@
                 alert("Entered Name Is Not Registered, Check Spelling!");
             }
             });
+            document.addEventListener('DOMContentLoaded', function () {
+        var scaleValue = '1';
+        if (window.innerWidth <= 1200) { // Example: Mobile devices
+            scaleValue = '0.8'; // Mimics zooming out
+        }
+
+        var viewportMetaTag = document.createElement('meta');
+        viewportMetaTag.name = 'viewport';
+        viewportMetaTag.content = 'width=device-width, initial-scale=' + scaleValue;
+        document.getElementsByTagName('head')[0].appendChild(viewportMetaTag);
+    });
     </script>  
 </body>
