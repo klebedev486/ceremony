@@ -20,18 +20,18 @@
         -1px  1px 0 #000,
         1px  1px 0 #000;
         }
-    .upper-left-up {
+    /* .upper-left-up {
         position: fixed;
         writing-mode: vertical-lr; 
         transform-origin: bottom right; 
         transform: rotate(180deg) translateY(85%) translateX(120%);
         
-        }
+        } */
     .upper-left-right {
         position: fixed;
         writing-mode: horizontal; 
-        transform-origin: left right; 
-        transform: translateX(15%) translatey(-15%);
+        left: 12%;
+        top: calc(-8px);
         }
     #deco-size {
         font-size: 30px;
@@ -142,12 +142,18 @@
     top: 60%;
     transform: translate(-50%, -50%);
     width: 270px; 
-    
     }
+    .upper-left-right {
+        
+        left: 50%;
+        top: 10px; /* Adjusted from calc(-8px) to ensure visibility */
+        transform: translateX(-50%);
+        white-space: nowrap;
+        }
     }
     @media (max-width: 1000px) {
     #deco-size {
-        font-size: 15px; /* reduced -7 for mobile */
+        font-size: 23px; /* reduced -7 for mobile */
         }
     
     }
@@ -157,11 +163,11 @@
 </style>
 </head>
 <body>
-    <div class="upper-left-up" id="deco-size">
+    <!-- <div class="upper-left-up" id="deco-size">
         <h1>KONSTANTIN AND</h1>
-    </div>
+    </div> -->
     <div class="upper-left-right" id="deco-size">
-        <h1>CAROLINE'S WEDDING</h1>
+        <h1>KOSTYA & CAROL</h1>
     </div>
 
     <div class="menu">
