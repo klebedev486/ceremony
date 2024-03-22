@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+        /* Set the background image */
+       background-image: url('MeAndCarol.jpg');
+       /* Ensure the image covers the whole page */
+        background-size: cover;
+        /* The background image does not scroll with the page */
+        background-attachment: fixed;
+        background-position: center;
+        color: white;
+        text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+        }
+    .upper-left-up {
+        position: fixed;
+        writing-mode: vertical-lr; 
+        transform-origin: bottom right; 
+        transform: rotate(180deg) translateY(85%) translateX(120%);
+        
+        }
+    .upper-left-right {
+        position: fixed;
+        writing-mode: horizontal; 
+        transform-origin: left right; 
+        transform: translateX(15%) translatey(-15%);
+        }
+    #deco-size {
+        font-size: 30px;
+        }
+
+    .menu {
+        position: fixed;
+        top: calc(100px + 2em); /* Adjust this value based on the actual height of .upper-left-right */
+        left: 30%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+    
+        gap: 20px; /* Adjust the space between menu items */
+        }
+
+    .menu a {
+        text-decoration: none; /* Removes the underline from links */
+        color: inherit; /* Keeps the text color the same as your <h3> tags */
+        background-color: hsla(229, 74%, 46%, 0.814);
+        border: 5px groove grey;
+        padding: 1px 10px;
+        box-sizing: border-box;
+        }
+
+
+    .right-side-image {
+        position: fixed;
+        right: 10px; 
+        top: 30px; 
+        width: 600px; 
+        height: auto; 
+        border: 5px groove grey;
+        }
+        .message {
+            position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: calc(100px + 4em + 60px); /* Adjust based on .menu's bottom edge */
+        left: 30%;
+        transform: translateX(-50%);
+        width: 80%; /* Or adjust to suit */
+        gap: 10px; /* Space between child elements */
+        }
+    
+    #button {     
+        padding: 10px 20px;
+        background-color: hsla(229, 74%, 46%, 0.814);
+        border: 5px groove grey;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 20px; 
+        }
+
+    @media (max-width: 1400px) {
+    .right-side-image {
+        display: none; /* This will hide the image on small screens */
+        }
+    body {
+        background-image: url('KostyaAndCarol2.png');
+        }
+        #deco-size {
+        font-size: 27px;
+        }
+        .menu {
+        position: fixed;
+        top: calc(100px + 2em); /* Adjust this to position just below .upper-left-right */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        flex-direction: row; /* Stack links vertically for smaller screens */
+        gap: 10px; /* Adjust gap for a vertical layout */
+        }
+        .message {
+        left: 50%;
+        }
+    }
+    @media (max-width: 1000px) {
+    #deco-size {
+        font-size: 20px;
+        }
+    }
+        
+
+    
+</style>
+</head>
+<body>
+    <div class="upper-left-up" id="deco-size">
+        <h1>KONSTANTIN AND</h1>
+    </div>
+    <div class="upper-left-right" id="deco-size">
+        <h1>CAROLINE'S WEDDING</h1>
+    </div>
+
+    <div class="menu">
+        <a href="index.html"><h3>Main</h3></a>
+        <a href="itinerary.html"><h3>Itinerary</h3></a>
+    </div>
+    
+    <div class="message">
+        <h2>You Are Invited To Our Wedding!</h2>
+        <h2>July 13, 2024</h2>
+        <h2 id="countdown"></h2>
+        <script src="countdown.js"></script>
+        <h2 id="h2-2">Join Us In This Celebration!</h2>
+        <h2 id="h2-3">Click Below To Register</h2>
+        <a href="itinerary.html" id="button">Log In To Receive Instructions</a>
+    </div>
+
+    <div class="side-image">
+        <img src="KostyaAndCarol2.png" class="right-side-image" alt="Kostya And Carol Together">
+    </div>
+</body>
