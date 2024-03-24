@@ -66,57 +66,38 @@
         height: auto; 
         border: 5px groove grey;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .mainDiv {
+            position: fixed;
+            
             border: 5px groove grey;
-            padding: 40px;
-            border-radius: 5px;
             background-color: hsla(229, 74%, 46%, 0.814);
-            color: white;
-            width: 20%; 
-            transform: translateX(-80%) translatey(50%);
-            margin: auto; /* Keeps the form centered */
-            font-size: 20px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
+            width: 45%;
+            height: 570px;
+            transform: translateX(17%) translatey(40%);
+            overflow-y: auto;
+            box-sizing: border-box; 
         }
-        label, input {
-            display: block; /* Makes elements occupy their own line */
-            width: 100%;
-            margin-top: 10px;
-            margin-bottom: 10px; /* Adds space below each input */
+        .textUpperH2 .textLowerH2 .parkingDiv {
+            position: relative; /* Needed for absolute positioning of the child img */
+            width: 100%; /* Adjust container width as needed */
+            height: 30%; /* Adjust container height as needed */
+            display: flex; /* Use flexbox for easy centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            margin: 0 auto; /* Centers the div in the middle of its parent element */
+            
             
         }
-        input[type="text"], input[type="number"] {
-            padding: 15px; /* Increased padding for larger inputs */
-            font-size: 18px; /* Larger font size for better readability */
-            line-height: 1.5; /* Adjust line height for aesthetics and readability */
-            border-radius: 4px; /* Optional: Adds rounded corners for a modern look */
-            border: 1px groove grey; /* Slightly lighter border color */
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-        input[type="submit"] {
-            background-color: hsla(229, 74%, 46%, 0.814);
-            color: white;
-            padding: 10px 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 20px;
+        .parkingImage {
+            opacity: 0.85; /* Make the image a bit transparent (adjust as needed) */
+            width: 90%;
+            max-width: 95%; /* Ensure the image is responsive and fits its container */
+            height: auto; /* Maintain aspect ratio */
+            box-sizing: border-box; /* Include border in the element's dimensions */
+            border: 5px groove grey; /* Example border: 5 pixels solid black */
             
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
         }
+        
 
     @media (max-width: 1400px) {
     .right-side-image {
@@ -136,13 +117,7 @@
         flex-direction: row; /* Stack links vertically for smaller screens */
         gap: 10px; /* Adjust gap for a vertical layout */
         }
-    form {
-        position: fixed; /* Use absolute if you need it relative to a container */
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    width: 270px; 
-    }
+    
     .upper-left-right {
         
         left: 50%;
@@ -150,6 +125,21 @@
         transform: translateX(-50%);
         white-space: nowrap;
         }
+        
+    .mainDiv {
+        position: fixed;
+        left: 50%; /* Center horizontally */
+        top: calc(120px); /* Adjust this value based on the actual combined height of .upper-left-right and .menu */
+        transform: translateX(-50%); /* Center based on its width */
+        width: 90%;
+        height: 85%; /* Dynamically calculate height */
+        border: 5px groove grey;
+        background-color: hsla(229, 74%, 46%, 0.814);
+        overflow-y: auto;
+        box-sizing: border-box; 
+        margin-bottom: 10%;
+        }
+        
     }
     @media (max-width: 1000px) {
     #deco-size {
@@ -177,73 +167,84 @@
    <div class="side-image">
         <img src="KostyaAndCarol2.png" class="right-side-image" alt="Kostya And Carol Together">
     </div>
-    <form action="/submit-form" id="myForm" method="post">
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" required>
-    
-        <br><br> <!-- Adding some space between the inputs -->
-    
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" required>
-    
-        <br><br>
-    
-        <input type="submit" id="submit" value="Submit">      
-    </form>
+    <div class="mainDiv">
+        <div class="textH1">
+            <h1 class="greetNames">Hello <span class="guestNames">Dear Guests</span>!</h1>
+            <h1 class="greetWelcome">We are Excited to Have You at Our Wedding!</h1>
+        </div>
+        <div class="textUpperH2">
+            <h2>The wedding itinerary will start with the Ceremony:</h2> 
+            <h2>2pm at 3231 N Cicero ave, Chicago, IL 60641</h2>
+            <h2>There is paid street parking on Cicero Avenue</h2> 
+            <h2>Free parking lot is available 0.3mi (3min) away at:</h2> 
+            <h2>3251 N Kilpatrick Ave, Chicago, IL 60641</h2>     
+        </div>
+        <div class="parkingDiv">
+            <img src="ParkingWedding2.png" alt="Parking Image" class="parkingImage">
+        </div>
+        <div class="textLowerH2">
+            <h2>After the Ceremony we will have a Reception at 5pm:</h2> 
+            <h2>Located at 2139 CityGate Lane, Naperville, IL 60563</h2>
+            <h2>Gifts in financial form are welcome, though not necessary</h2>
+            <h2>Your table number is <span class="tableNumber">Not Yet Assigned</span> (tables will be numbered)</h2>
+            <h1 class="finalGreeting">Thank You and See You Soon!</h1>    
+        </div>
+    </div>
     <script>
-        document.getElementById('submit').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            var firstName = document.getElementById('first-name').value;
-            var lastName = document.getElementById('last-name').value;
-            var enteredName = (firstName + " " + lastName).toLowerCase(); 
-            var guestList = ["dmitriy lebedev", "vladimir lebedev", "andrei danielyan", "chris novak", 
-            "helena novak", "jake allen", "stacey allen", "cornel crisan", "anthony jenkins", "aman gabriel", 
-            "emanuel favela", "yuri dziatko", "andrei grebeniukov", "deangelo anderson"];
-            function getEditDistance(a, b) {
-                if (a.length === 0) return b.length; 
-                if (b.length === 0) return a.length;
-                var matrix = [];
-        
-                // increment along the first column of each row
-                var i;
-                for (i = 0; i <= b.length; i++) {
-                    matrix[i] = [i];
-                }
-        
-                // increment each column in the first row
-                var j;
-                for (j = 0; j <= a.length; j++) {
-                    matrix[0][j] = j;
-                }
-        
-                // Fill in the rest of the matrix
-                for (i = 1; i <= b.length; i++) {
-                    for (j = 1; j <= a.length; j++) {
-                        if (b.charAt(i - 1) == a.charAt(j - 1)) {
-                            matrix[i][j] = matrix[i - 1][j - 1];
-                        } else {
-                            matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, // substitution
-                                                    Math.min(matrix[i][j - 1] + 1, // insertion
-                                                             matrix[i - 1][j] + 1)); // deletion
-                        }
-                    }
-                }
-        
-                return matrix[b.length][a.length];
-            };
-        
-            // Check if there's a name in the guest list close enough to the guestName
-            var matchedName = guestList.find(function(listName) {
-                return getEditDistance(enteredName, listName) <= 3;
-            });
-            if (matchedName) {
-                localStorage.setItem('guestName', matchedName); // Store guest name in localStorage
-                location.href="instructions.html";
-            } else {
-                alert("Entered Name Is Not Registered, Check Spelling!");
-            }
-            });
-            document.addEventListener('DOMContentLoaded', function () {
+        var namesAndTables = [document.querySelector('.guestNames'), document.querySelector('.tableNumber')];
+        var guestName = localStorage.getItem('guestName');
+        if (guestName !== null) {
+        switch (guestName) {
+            case "lebedev":
+            namesAndTables[0].textContent = "Papa and Zarema";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "danielyan":
+            namesAndTables[0].textContent = "Andrei and Nataly";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "novak":
+            namesAndTables[0].textContent = "Chris and Helena";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "allen":
+            namesAndTables[0].textContent = "Jake and Stacy";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "crisan":
+            namesAndTables[0].textContent = "Cornel, Lidia and Sebastian";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "jenkins":
+            namesAndTables[0].textContent = "Anthony";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "gabriel":
+            namesAndTables[0].textContent = "Aman";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "favela":
+            namesAndTables[0].textContent = "Emanuel";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "dziatko":
+            namesAndTables[0].textContent = "Yuri and Vera";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "grebeniukov":
+            namesAndTables[0].textContent = "Andrei and Kate";
+            namesAndTables[1].textContent = "5";
+            break;
+            case "anderson":
+            namesAndTables[0].textContent = "DeAngelo and Briana";
+            namesAndTables[1].textContent = "5";
+            break;
+        }
+        } else {
+        alert('Error, Please Contact Administrator!');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
         var scaleValue = '1';
         if (window.innerWidth <= 1200) { // Example: Mobile devices
             scaleValue = '0.8'; // Mimics zooming out
@@ -254,5 +255,5 @@
         viewportMetaTag.content = 'width=device-width, initial-scale=' + scaleValue;
         document.getElementsByTagName('head')[0].appendChild(viewportMetaTag);
     });
-    </script>  
+    </script>
 </body>
