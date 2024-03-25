@@ -74,6 +74,8 @@
         transform: translateX(17%) translatey(40%);
         overflow-y: auto;
         box-sizing: border-box; 
+        font-size: 16px;
+        font-family: Jazz LET, fantasy;
         }
     .textUpperH2 .textLowerH2 .parkingDiv {
         position: relative; /* Needed for absolute positioning of the child img */
@@ -92,6 +94,19 @@
         box-sizing: border-box; /* Include border in the element's dimensions */
         border: 5px groove grey; /* Example border: 5 pixels solid black */    
         }
+    .tableNumber {
+        font-weight: bold; 
+        font-size: 110%; 
+        color: white; 
+        padding: 2px 6px;
+        border: 1px solid black;
+        background-color: grey;
+        border-radius: 50%; 
+        }
+    .special {
+        font-family: Luminari, fantasy;
+        font-size: 30px;
+    }
     @media (max-width: 1400px) {
     .right-side-image {
         display: none; /* This will hide the image on small screens */
@@ -161,10 +176,9 @@
             <h1 class="greetWelcome">We are Excited to Have You at Our Wedding!</h1>
         </div>
         <div class="textUpperH2">
-            <h2>The Wedding Itinerary</h2>
-            <h2>Ceremony at 2pm:</h2> 
+            <h2 class="special">The Wedding Itinerary</h2>
+            <h2>Ceremony at 2pm: (Doors open 1:30pm)</h2> 
             <h2>3231 N Cicero ave, Chicago, IL 60641</h2>
-            <h2>Doors open at 1:30pm</h2>
             <h2>Paid street parking on Cicero</h2> 
             <h2>Free parking lot is available 0.3mi (3min walk) away at:</h2> 
             <h2>3251 N Kilpatrick Ave, Chicago, IL 60641</h2>     
@@ -173,10 +187,10 @@
             <img src="ParkingWedding2.png" alt="Parking Image" class="parkingImage">
         </div>
         <div class="textLowerH2">
-            <h2>After the Ceremony</h2> 
+            <h2 class="special">After the Ceremony</h2> 
             <h2>Reception at 5pm:</h2>
             <h2>2139 CityGate Lane, Naperville, IL 60563</h2>
-            <h2>Your table number is <span class="tableNumber">Not Yet Assigned</span> (tables will be numbered)</h2>
+            <h2>Your table is number <span class="tableNumber">Not Yet Assigned</span> (tables will be numbered)</h2>
             <h2>Gifts in financial form are welcome</h2>
             <h1 class="finalGreeting">Thank You and See You Soon!</h1>    
         </div>
