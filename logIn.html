@@ -27,7 +27,6 @@
         transform: rotate(180deg) translateY(85%) translateX(120%);
         
         } */
-        
     .upper-left-right {
         position: fixed;
         writing-mode: horizontal; 
@@ -37,18 +36,15 @@
     #deco-size {
         font-size: 30px;
         }
-
     .menu {
         position: fixed;
         top: calc(100px + 2em); /* Adjust this value based on the actual height of .upper-left-right */
         left: 30%;
         transform: translateX(-50%);
         display: flex;
-        flex-direction: row;
-    
+        flex-direction: row;  
         gap: 20px; /* Adjust the space between menu items */
         }
-
     .menu a {
         text-decoration: none; /* Removes the underline from links */
         color: inherit; /* Keeps the text color the same as your <h3> tags */
@@ -57,8 +53,6 @@
         padding: 1px 10px;
         box-sizing: border-box;
         }
-
-
     .right-side-image {
         position: fixed;
         right: 10px; 
@@ -67,61 +61,56 @@
         height: auto; 
         border: 5px groove grey;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 5px groove grey;
-            padding: 40px;
-            border-radius: 5px;
-            background-color: hsla(229, 74%, 46%, 0.814);
-            color: white;
-            width: 20%; 
-            white-space: nowrap;
-            transform: translateX(-80%) translatey(90%);
-            margin: auto; /* Keeps the form centered */
-            font-size: 20px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 5px groove grey;
+        padding: 40px;
+        border-radius: 5px;
+        background-color: hsla(229, 74%, 46%, 0.814);
+        color: white;
+        width: 20%; 
+        white-space: nowrap;
+        transform: translateX(-80%) translatey(90%);
+        margin: auto; /* Keeps the form centered */
+        font-size: 20px;
+        text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
         }
-        label, input {
-            display: block; /* Makes elements occupy their own line */
-            width: 100%;
-            margin-top: 10px;
-            margin-bottom: 10px; /* Adds space below each input */
-            
-            
+    label, input {
+        display: block; /* Makes elements occupy their own line */
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px; /* Adds space below each input */    
+        }  
+    input[type="text"], input[type="number"] {
+        padding: 15px; /* Increased padding for larger inputs */
+        font-size: 18px; /* Larger font size for better readability */
+        line-height: 1.5; /* Adjust line height for aesthetics and readability */
+        border-radius: 4px; /* Optional: Adds rounded corners for a modern look */
+        border: 1px groove grey; /* Slightly lighter border color */
+        margin-bottom: 10px;
+        margin-top: 10px;
         }
-        
-        input[type="text"], input[type="number"] {
-            padding: 15px; /* Increased padding for larger inputs */
-            font-size: 18px; /* Larger font size for better readability */
-            line-height: 1.5; /* Adjust line height for aesthetics and readability */
-            border-radius: 4px; /* Optional: Adds rounded corners for a modern look */
-            border: 1px groove grey; /* Slightly lighter border color */
-            margin-bottom: 10px;
-            margin-top: 10px;
+    input[type="submit"] {
+        background-color: hsla(229, 74%, 46%, 0.814);
+        color: white;
+        padding: 10px 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;    
+        text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
         }
-        input[type="submit"] {
-            background-color: hsla(229, 74%, 46%, 0.814);
-            color: white;
-            padding: 10px 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 20px;
-            
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-        }
-
     @media (max-width: 1400px) {
     .right-side-image {
         display: none; /* This will hide the image on small screens */
@@ -142,13 +131,12 @@
         }
     form {
         position: fixed; /* Use absolute if you need it relative to a container */
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    width: 270px; 
-    }
-    .upper-left-right {
-        
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        width: 270px; 
+        }
+    .upper-left-right {       
         left: 50%;
         top: 10px; /* Adjusted from calc(-8px) to ensure visibility */
         transform: translateX(-50%);
@@ -161,12 +149,8 @@
         }
         label {
             text-align: center;
-        }
-    
-    }
-        
-
-    
+        }  
+    }   
 </style>
 </head>
 <body>
