@@ -116,6 +116,7 @@
         transform: translateX(-50%); /* Adjust for centering */
         flex-direction: row; /* Stack links vertically for smaller screens */
         gap: 10px; /* Adjust gap for a vertical layout */
+        display: none;
         }
     
     .upper-left-right {
@@ -124,6 +125,7 @@
         top: 10px; /* Adjusted from calc(-8px) to ensure visibility */
         transform: translateX(-50%);
         white-space: nowrap;
+        display: none;
         }
         
     .mainDiv {
@@ -239,6 +241,10 @@
             namesAndTables[0].textContent = "DeAngelo and Briana";
             namesAndTables[1].textContent = "5";
             break;
+            case "chali":
+            namesAndTables[0].textContent = "Langi, Ngosa and family";
+            namesAndTables[1].textContent = "1 & 2";
+            break;
         }
         } else {
         alert('Error, Please Contact Administrator!');
@@ -246,7 +252,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
         var scaleValue = '1';
-        if (window.innerWidth <= 1200) { // Example: Mobile devices
+        if (window.innerWidth <= 1400) { // Example: Mobile devices
             scaleValue = '0.8'; // Mimics zooming out
         }
 

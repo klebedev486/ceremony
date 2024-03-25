@@ -92,7 +92,9 @@
             margin-top: 10px;
             margin-bottom: 10px; /* Adds space below each input */
             
+            
         }
+        
         input[type="text"], input[type="number"] {
             padding: 15px; /* Increased padding for larger inputs */
             font-size: 18px; /* Larger font size for better readability */
@@ -156,6 +158,9 @@
     #deco-size {
         font-size: 23px; /* reduced -7 for mobile */
         }
+        label {
+            text-align: center;
+        }
     
     }
         
@@ -193,7 +198,7 @@
             var lastName = document.getElementById('last-name').value;
             var enteredName = lastName.toLowerCase(); 
             var guestList = ["lebedev", "danielyan", "novak", "allen", "crisan", "jenkins", 
-            "gabriel", "favela", "dziatko", "grebeniukov", "anderson"];
+            "gabriel", "favela", "dziatko", "grebeniukov", "anderson", "chali"];
             function getEditDistance(a, b) {
                 if (a.length === 0) return b.length; 
                 if (b.length === 0) return a.length;
@@ -240,7 +245,7 @@
             });
             document.addEventListener('DOMContentLoaded', function () {
         var scaleValue = '1';
-        if (window.innerWidth <= 1200) { // Example: Mobile devices
+        if (window.innerWidth <= 1400) { // Example: Mobile devices
             scaleValue = '0.8'; // Mimics zooming out
         }
 
