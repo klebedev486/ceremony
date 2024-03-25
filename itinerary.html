@@ -45,10 +45,8 @@
         transform: translateX(-50%);
         display: flex;
         flex-direction: row;
-    
         gap: 20px; /* Adjust the space between menu items */
         }
-
     .menu a {
         text-decoration: none; /* Removes the underline from links */
         color: inherit; /* Keeps the text color the same as your <h3> tags */
@@ -67,39 +65,33 @@
         height: auto; 
         border: 5px groove grey;
         }
-        .mainDiv {
-            position: fixed;
-            
-            border: 5px groove grey;
-            background-color: hsla(229, 74%, 46%, 0.814);
-            width: 45%;
-            height: 570px;
-            transform: translateX(17%) translatey(40%);
-            overflow-y: auto;
-            box-sizing: border-box; 
+    .mainDiv {
+        position: fixed;
+        border: 5px groove grey;
+        background-color: hsla(229, 74%, 46%, 0.814);
+        width: 45%;
+        height: 570px;
+        transform: translateX(17%) translatey(40%);
+        overflow-y: auto;
+        box-sizing: border-box; 
         }
-        .textUpperH2 .textLowerH2 .parkingDiv {
-            position: relative; /* Needed for absolute positioning of the child img */
-            width: 100%; /* Adjust container width as needed */
-            height: 30%; /* Adjust container height as needed */
-            display: flex; /* Use flexbox for easy centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            margin: 0 auto; /* Centers the div in the middle of its parent element */
-            
-            
+    .textUpperH2 .textLowerH2 .parkingDiv {
+        position: relative; /* Needed for absolute positioning of the child img */
+        width: 100%; /* Adjust container width as needed */
+        height: 30%; /* Adjust container height as needed */
+        display: flex; /* Use flexbox for easy centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        margin: 0 auto; /* Centers the div in the middle of its parent element */   
         }
-        .parkingImage {
-            opacity: 0.85; /* Make the image a bit transparent (adjust as needed) */
-            width: 100%;
-            max-width: 100%; /* Ensure the image is responsive and fits its container */
-            height: auto; /* Maintain aspect ratio */
-            box-sizing: border-box; /* Include border in the element's dimensions */
-            border: 5px groove grey; /* Example border: 5 pixels solid black */
-            
+    .parkingImage {
+        opacity: 0.85; /* Make the image a bit transparent (adjust as needed) */
+        width: 100%;
+        max-width: 100%; /* Ensure the image is responsive and fits its container */
+        height: auto; /* Maintain aspect ratio */
+        box-sizing: border-box; /* Include border in the element's dimensions */
+        border: 5px groove grey; /* Example border: 5 pixels solid black */    
         }
-        
-
     @media (max-width: 1400px) {
     .right-side-image {
         display: none; /* This will hide the image on small screens */
@@ -110,7 +102,7 @@
         #deco-size {
         font-size: 27px;
         }
-        .menu {
+    .menu {
         position: fixed;
         top: calc(100px + 2em); /* Adjust this to position just below .upper-left-right */
         left: 50%; /* Center horizontally */
@@ -119,7 +111,6 @@
         gap: 10px; /* Adjust gap for a vertical layout */
         display: none;
         }
-    
     .upper-left-right {
         
         left: 50%;
@@ -127,8 +118,7 @@
         transform: translateX(-50%);
         white-space: nowrap;
         display: none;
-        }
-        
+        }     
     .mainDiv {
         position: fixed;
         left: 50%; /* Center horizontally */
@@ -141,18 +131,13 @@
         overflow-y: auto;
         box-sizing: border-box; 
         margin-bottom: 10%;
-        }
-        
+        }   
     }
     @media (max-width: 1000px) {
     #deco-size {
         font-size: 23px; /* reduced -7 for mobile */
         }
-    
-    }
-        
-
-    
+    }   
 </style>
 </head>
 <body>
@@ -176,20 +161,23 @@
             <h1 class="greetWelcome">We are Excited to Have You at Our Wedding!</h1>
         </div>
         <div class="textUpperH2">
-            <h2>The wedding itinerary will start with the Ceremony:</h2> 
-            <h2>2pm at 3231 N Cicero ave, Chicago, IL 60641</h2>
-            <h2>There is paid street parking on Cicero Avenue</h2> 
-            <h2>Free parking lot is available 0.3mi (3min) away at:</h2> 
+            <h2>The Wedding Itinerary</h2>
+            <h2>Ceremony at 2pm:</h2> 
+            <h2>3231 N Cicero ave, Chicago, IL 60641</h2>
+            <h2>Doors open at 1:30pm</h2>
+            <h2>Paid street parking on Cicero</h2> 
+            <h2>Free parking lot is available 0.3mi (3min walk) away at:</h2> 
             <h2>3251 N Kilpatrick Ave, Chicago, IL 60641</h2>     
         </div>
         <div class="parkingDiv">
             <img src="ParkingWedding2.png" alt="Parking Image" class="parkingImage">
         </div>
         <div class="textLowerH2">
-            <h2>After the Ceremony we will have a Reception at 5pm:</h2> 
-            <h2>Located at 2139 CityGate Lane, Naperville, IL 60563</h2>
-            <h2>Gifts in financial form are welcome, though not necessary</h2>
+            <h2>After the Ceremony</h2> 
+            <h2>Reception at 5pm:</h2>
+            <h2>2139 CityGate Lane, Naperville, IL 60563</h2>
             <h2>Your table number is <span class="tableNumber">Not Yet Assigned</span> (tables will be numbered)</h2>
+            <h2>Gifts in financial form are welcome</h2>
             <h1 class="finalGreeting">Thank You and See You Soon!</h1>    
         </div>
     </div>
@@ -258,13 +246,11 @@
         } else {
         alert('Error, Please Contact Administrator!');
         }
-
         document.addEventListener('DOMContentLoaded', function () {
         var scaleValue = '1';
         if (window.innerWidth <= 1400) { // Example: Mobile devices
-            scaleValue = '0.7'; // Mimics zooming out
+            scaleValue = '0.8'; // Mimics zooming out
         }
-
         var viewportMetaTag = document.createElement('meta');
         viewportMetaTag.name = 'viewport';
         viewportMetaTag.content = 'width=device-width, initial-scale=' + scaleValue;
