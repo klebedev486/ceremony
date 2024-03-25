@@ -27,10 +27,7 @@
         transform: rotate(180deg) translateY(85%) translateX(120%);
         
         } */
-        html, body {
-    min-height: 100vh; /* Ensures that the body is at least the height of the viewport */
-    overflow-y: auto; /* Allows vertical scrolling if the content exceeds the viewport height */
-}
+       
     .upper-left-right {
         position: fixed;
         writing-mode: horizontal; 
@@ -265,7 +262,9 @@
         document.addEventListener('DOMContentLoaded', function () {
         var scaleValue = '1';
         if (window.innerWidth <= 1400) { // Example: Mobile devices
-            scaleValue = '0.8'; // Mimics zooming out
+            scaleValue = '0.7'; // Mimics zooming out
+        } else if (window.innerWidth <= 1200); {
+            scaleValue = '0.8';
         }
 
         var viewportMetaTag = document.createElement('meta');
