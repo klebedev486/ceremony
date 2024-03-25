@@ -27,6 +27,10 @@
         transform: rotate(180deg) translateY(85%) translateX(120%);
         
         } */
+        html, body {
+    min-height: 100vh; /* Ensures that the body is at least the height of the viewport */
+    overflow-y: auto; /* Allows vertical scrolling if the content exceeds the viewport height */
+}
     .upper-left-right {
         position: fixed;
         writing-mode: horizontal; 
@@ -198,7 +202,7 @@
             var lastName = document.getElementById('last-name').value;
             var enteredName = lastName.toLowerCase(); 
             var guestList = ["lebedev", "danielyan", "novak", "allen", "crisan", "jenkins", 
-            "gabriel", "favela", "dziatko", "grebeniukov", "anderson", "chali"];
+            "gabriel", "favela", "dziatko", "grebeniukov", "anderson", "chali", "arthur", "yahr"];
             function getEditDistance(a, b) {
                 if (a.length === 0) return b.length; 
                 if (b.length === 0) return a.length;

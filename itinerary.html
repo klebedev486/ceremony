@@ -27,6 +27,10 @@
         transform: rotate(180deg) translateY(85%) translateX(120%);
         
         } */
+        html, body {
+    min-height: 100vh; /* Ensures that the body is at least the height of the viewport */
+    overflow-y: auto; /* Allows vertical scrolling if the content exceeds the viewport height */
+}
     .upper-left-right {
         position: fixed;
         writing-mode: horizontal; 
@@ -197,25 +201,25 @@
         var guestName = localStorage.getItem('guestName');
         if (guestName !== null) {
         switch (guestName) {
+            case "chali":
+            namesAndTables[0].textContent = "Langi, Ngosa and family";
+            namesAndTables[1].textContent = "1 & 2";
+            break;
             case "lebedev":
             namesAndTables[0].textContent = "Papa and Zarema";
-            namesAndTables[1].textContent = "5";
+            namesAndTables[1].textContent = "3";
             break;
             case "danielyan":
             namesAndTables[0].textContent = "Andrei and Nataly";
-            namesAndTables[1].textContent = "5";
+            namesAndTables[1].textContent = "4";
             break;
             case "novak":
             namesAndTables[0].textContent = "Chris and Helena";
-            namesAndTables[1].textContent = "5";
+            namesAndTables[1].textContent = "4";
             break;
             case "allen":
             namesAndTables[0].textContent = "Jake and Stacy";
-            namesAndTables[1].textContent = "5";
-            break;
-            case "crisan":
-            namesAndTables[0].textContent = "Cornel, Lidia and Sebastian";
-            namesAndTables[1].textContent = "5";
+            namesAndTables[1].textContent = "4";
             break;
             case "jenkins":
             namesAndTables[0].textContent = "Anthony";
@@ -229,21 +233,29 @@
             namesAndTables[0].textContent = "Emanuel";
             namesAndTables[1].textContent = "5";
             break;
-            case "dziatko":
-            namesAndTables[0].textContent = "Yuri and Vera";
-            namesAndTables[1].textContent = "5";
-            break;
-            case "grebeniukov":
-            namesAndTables[0].textContent = "Andrei and Kate";
-            namesAndTables[1].textContent = "5";
-            break;
             case "anderson":
             namesAndTables[0].textContent = "DeAngelo and Briana";
             namesAndTables[1].textContent = "5";
             break;
-            case "chali":
-            namesAndTables[0].textContent = "Langi, Ngosa and family";
-            namesAndTables[1].textContent = "1 & 2";
+            case "crisan":
+            namesAndTables[0].textContent = "Cornel, Lidia and Sebastian";
+            namesAndTables[1].textContent = "6";
+            break;
+            case "dziatko":
+            namesAndTables[0].textContent = "Yuri and Vera";
+            namesAndTables[1].textContent = "7";
+            break;
+            case "grebeniukov":
+            namesAndTables[0].textContent = "Andrei and Kate";
+            namesAndTables[1].textContent = "7";
+            break;
+            case "arthur":
+            namesAndTables[0].textContent = "Pastor Tim and Esther";
+            namesAndTables[1].textContent = "7";
+            break;
+            case "yahr":
+            namesAndTables[0].textContent = "Ruth";
+            namesAndTables[1].textContent = "7";
             break;
         }
         } else {
